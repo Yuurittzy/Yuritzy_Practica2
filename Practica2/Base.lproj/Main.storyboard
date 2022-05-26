@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iqV-Us-Qq6">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Practica2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J4l-Mf-Ygj">
+                                <rect key="frame" x="108" y="160" width="199" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Mostrar archivo .XLSX"/>
+                                <connections>
+                                    <segue destination="1dJ-0j-uVE" kind="show" id="NJP-5E-gJo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Se-Am-PuU">
+                                <rect key="frame" x="108" y="257" width="199" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Mostrar archivo .PDF"/>
+                                <connections>
+                                    <segue destination="Y9i-BL-bUH" kind="show" id="fR9-bi-Phk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uz1-La-cKm">
+                                <rect key="frame" x="108" y="361" width="199" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Mostrar archivo .JPG"/>
+                                <connections>
+                                    <segue destination="JX1-jF-CIO" kind="show" id="g8P-Yr-RjT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gfh-dM-2wk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="65.625"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="BiI-t6-gm5">
+            <objects>
+                <viewController id="Y9i-BL-bUH" customClass="PDFViewController" customModule="Practica2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="riQ-eM-B4F">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pfV-E3-wQo">
+                                <rect key="frame" x="20" y="128" width="374" height="694"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KXC-ob-dCg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KXC-ob-dCg" firstAttribute="trailing" secondItem="pfV-E3-wQo" secondAttribute="trailing" constant="20" id="Fud-wZ-GgE"/>
+                            <constraint firstItem="pfV-E3-wQo" firstAttribute="top" secondItem="KXC-ob-dCg" secondAttribute="top" constant="40" id="K33-Fe-TJh"/>
+                            <constraint firstItem="KXC-ob-dCg" firstAttribute="bottom" secondItem="pfV-E3-wQo" secondAttribute="bottom" constant="40" id="VaI-AW-Y9u"/>
+                            <constraint firstItem="pfV-E3-wQo" firstAttribute="leading" secondItem="KXC-ob-dCg" secondAttribute="leading" constant="20" id="ywh-vA-8Dl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Qlc-hi-JA7"/>
+                    <connections>
+                        <outlet property="webView" destination="pfV-E3-wQo" id="kBW-hm-xEA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gqf-Me-evt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1986" y="108"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Lwd-61-B4p">
+            <objects>
+                <viewController id="JX1-jF-CIO" customClass="JPGViewController" customModule="Practica2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tIC-z4-zCF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="COx-j4-ssl">
+                                <rect key="frame" x="20" y="128" width="374" height="714"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0fL-Qp-bFD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="COx-j4-ssl" firstAttribute="leading" secondItem="0fL-Qp-bFD" secondAttribute="leading" constant="20" id="Rtw-Og-hKw"/>
+                            <constraint firstItem="COx-j4-ssl" firstAttribute="top" secondItem="0fL-Qp-bFD" secondAttribute="top" constant="40" id="Wvw-eU-Wjj"/>
+                            <constraint firstItem="0fL-Qp-bFD" firstAttribute="trailing" secondItem="COx-j4-ssl" secondAttribute="trailing" constant="20" id="iuD-fB-xgf"/>
+                            <constraint firstItem="0fL-Qp-bFD" firstAttribute="bottom" secondItem="COx-j4-ssl" secondAttribute="bottom" constant="20" id="k5x-o3-iBC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fEA-IU-C0W"/>
+                    <connections>
+                        <outlet property="imageView" destination="COx-j4-ssl" id="FIx-Fz-KUL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SQC-1M-avq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1985.5072463768117" y="800.89285714285711"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="l8W-Tw-Hsk">
+            <objects>
+                <viewController id="1dJ-0j-uVE" customClass="XLSXViewController" customModule="Practica2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vW5-66-NL7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j2k-C7-Sy1">
+                                <rect key="frame" x="20" y="128" width="374" height="694"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9NC-9D-bDM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9NC-9D-bDM" firstAttribute="trailing" secondItem="j2k-C7-Sy1" secondAttribute="trailing" constant="20" id="Hfn-TL-yFI"/>
+                            <constraint firstItem="9NC-9D-bDM" firstAttribute="bottom" secondItem="j2k-C7-Sy1" secondAttribute="bottom" constant="40" id="KpJ-SI-9p8"/>
+                            <constraint firstItem="j2k-C7-Sy1" firstAttribute="top" secondItem="9NC-9D-bDM" secondAttribute="top" constant="40" id="UWd-j7-lhN"/>
+                            <constraint firstItem="j2k-C7-Sy1" firstAttribute="leading" secondItem="9NC-9D-bDM" secondAttribute="leading" constant="20" id="s4E-JI-o2R"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="C5t-pT-rfv"/>
+                    <connections>
+                        <outlet property="webView" destination="j2k-C7-Sy1" id="gg2-Og-qbh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O86-0G-5Yy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1986" y="-554"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZOh-ST-Q25">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iqV-Us-Qq6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5zi-jv-Fcu">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Lmc-Ow-NWj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ckw-nA-u7g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="65.625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
